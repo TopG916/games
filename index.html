@@ -17,6 +17,11 @@
         openGame();
       }
     });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "z" && e.ctrlKey && e.altKey) {
+        window.location.href = "https://topg916.github.io/games/index.html";
+      }
+    });
   </script>
 </body>
 </html>
