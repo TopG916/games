@@ -7,11 +7,16 @@
   <input type="text" placeholder = "game-name" id="input"></input>
   <button onclick="openGame()">open</button>
   <script>
-    var dt = null
+    var dt = null;
     function openGame() {
-      dt = document.getElementById("input").value
-      window.location.href = `https://topg916.github.io/games/${dt}/index.html`
+      dt = document.getElementById("input").value;
+      window.location.href = `https://topg916.github.io/games/${dt}/index.html`;
     }
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        openGame();
+      }
+    });
   </script>
 </body>
 </html>
