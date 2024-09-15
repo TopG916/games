@@ -1,27 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>open</title>
+  <title>games</title>
 </head>
 <body>
-  <input type="text" placeholder = "game-name" id="input"></input>
+  <select id = "input">
+    <option value="null">None</option>
+    <option value="10-minutes-till-dawn">10 minutes till dawn</option>
+    <option value="adrenalinechallenge">Adrenaline Challenge</option>
+    <option value="adventure-drivers">Adventure Drivers</option>
+    <option value="ages-of-conflict">Ages of Conflict</option>
+    <option value="alienhominid">Alien Hominid</option>
+    <option value="amazing-rope-police">Amazing Rope Police</option>
+    <option value="amidst-the-clouds">Amidst the Clouds</option>
+    <option value="among-us">Among Us</option>
+    <option value="aquaparks-slides">Aquaparks Slides</option>
+    <option value="avalanche">Avalanche</option>
+    <option value="awesometanks2">Awesome Tanks 2</option>
+    <option value="backrooms-2d">Backrooms 2D</option>
+    <option value="backrooms">Backrooms</option>
+    <option value="bacon-may-die">Bacon May Die</option>
+    <option value="baldis-basics">Baldis Basics</option>
+    <option value="ballistic-chickens">Ballistic Chickens</option>
+    <option value="basket-random">Basket Random</option>
+    <option value="battleforgondor">Battle for Gondor</option>
+    <option value="bigredbutton">Big Red Button</option>
+    <option value="bitlife">BitLife</option>
+    <option value="blackknight">Black Knight</option>
+    <option value="blockpost">Block Post</option>
+    <option value="bloonstd">BTD1</option>
+    <option value="bloonstd2">BTD2</option>
+    <option value="bloxors">Bloxors</option>
+    <option value="bntts">BNTTS</option>
+    <option value="boxhead2play">Box Head 2</option>
+    <option value="boxing-random">Boxing random</option>
+    <option value="breakingthebank">Breaking the Bank</option>
+    <option value="btd5">BTD5</option>
+    <option value="btts">BTTS</option>
+    <option value="bus and subway">bus and subway</option>
+    <option value="canyondefense">Canyon Defense</option>
+    <option value="cars-simulator">Cars Simulator</option>
+    <option value="cell-machine">Cell Machine</option>
+    <option value="champion-island">Champion Island</option>
+    <option value="championarcher">Champion Archer</option>
+  </select>
   <button onclick="openGame()">open</button>
   <script>
-    var dt = null;
+    var dt = null
     function openGame() {
-      dt = document.getElementById("input").value;
-      window.location.href = `https://topg916.github.io/games/${dt}/index.html`;
+      dt = document.getElementById("input").value
+      if (dt != "null") {
+        window.location.href = `https://topg916.github.io/games/${dt}/index.html`
+      } else {
+        alert("no game selected")
+      }
     }
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Enter") {
-        openGame();
+      if (e.ctrlKey && e.altKey && e.key === "z") {
+        window.location.href = "https://topg916.github.io/games/"
       }
-    });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "z" && e.ctrlKey && e.altKey) {
-        window.location.href = "https://topg916.github.io/games/index.html";
-      }
-    });
+    })
   </script>
 </body>
 </html>
